@@ -20,6 +20,7 @@ module.exports = withBundleAnalyzer({
   env: {
     DATABASE_URI: process.env.DATABASE_URI,
     DATABASE_NAME: process.env.DATABASE_NAME,
+    GA_TRACKING_ID: process.env.GA_TRACKING_ID,
   },
   experimental: {
     reactRefresh: process.env.NODE_ENV === 'production' ? false : true

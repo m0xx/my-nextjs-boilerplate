@@ -1,0 +1,67 @@
+{
+  "name": "my-nextjs-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "cy:open": "cypress open",
+    "dev": "next dev",
+    "dev:test": "DOTENV_OVERRIDE=.test.env next dev --port 4000",
+    "analyze": "ANALYZE=true next dev",
+    "build": "next build",
+    "start": "next start",
+    "storybook": "STORYBOOK_ENABLED=true start-storybook -s ./public -p 6006",
+    "test:e2e": "start-test dev:test 4000 cy:open"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-common-types": "0.2.32",
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-brands-svg-icons": "^5.13.0",
+    "@fortawesome/pro-light-svg-icons": "file:./vendors/fontawesome/fortawesome-pro-light-svg-icons-5.15.1.tgz",
+    "@fortawesome/pro-solid-svg-icons": "file:./vendors/fontawesome/fortawesome-pro-solid-svg-icons-5.15.1.tgz",
+    "@fortawesome/react-fontawesome": "^0.1.9",
+    "@fullhuman/postcss-purgecss": "^2.1.2",
+    "@hapi/joi": "^17.1.1",
+    "classnames": "^2.2.6",
+    "color": "^3.1.2",
+    "dotenv": "^8.2.0",
+    "find-my-way": "^3.0.0",
+    "isomorphic-unfetch": "^3.0.0",
+    "lodash": "^4.17.15",
+    "mongodb": "^3.5.6",
+    "next": "9.3.4",
+    "pino": "^6.2.1",
+    "pino-http": "^5.1.0",
+    "pino-pretty": "^4.0.0",
+    "prettier": "2.0.4",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-hook-form": "^5.5.1",
+    "swr": "^0.2.0",
+    "tailwindcss": "^1.2.0",
+    "uuid": "^8.0.0"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^9.3.5",
+    "@storybook/addon-a11y": "^5.3.18",
+    "@storybook/addon-actions": "5.3.18",
+    "@storybook/addon-links": "5.3.18",
+    "@storybook/addon-viewport": "^5.3.18",
+    "@storybook/addons": "5.3.18",
+    "@storybook/react": "5.3.18",
+    "@types/node": "^13.13.2",
+    "@types/react": "^16.9.34",
+    "babel-loader": "^8.0.5",
+    "cypress": "^5.3.0",
+    "husky": "^4.2.5",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "pretty-quick": "^2.0.1",
+    "start-server-and-test": "^1.11.5",
+    "typescript": "^3.8.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}

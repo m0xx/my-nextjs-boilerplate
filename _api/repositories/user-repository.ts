@@ -6,7 +6,7 @@ export type AddUserCmd = {
   lastName: string;
 };
 
-export type UserRepository = {
+export type User = {
   _id: string;
   email: string;
   firstName: string;
@@ -14,7 +14,7 @@ export type UserRepository = {
 };
 
 module.exports = function (db) {
-  async function create({ email, firstName, lastName }: AddUserCmd): Promise<UserRepository> {
+  async function create({ email, firstName, lastName }: AddUserCmd): Promise<User> {
     try {
       const { insertedId } = await db.collection('users').insertOne({
         email,
@@ -32,7 +32,7 @@ module.exports = function (db) {
     }
   }
 
-  async function findById(id: String): Promise<UserRepository> {
+  async function findById(id: String): Promise<User> {
     return db.collection('users').findOne({ _id: toObjectId(id) });
   }
 

@@ -129,7 +129,7 @@ export const VerticalFormControl = ({
   );
 };
 
-export const FormControl = ({ name, label, inputProps, input, errors, helpText }) => (
+export const FormControl = ({ name, label, inputProps, input, errors = {}, helpText }) => (
   <VerticalFormControl
     id={name}
     name={name}
